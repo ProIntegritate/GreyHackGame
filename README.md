@@ -10,6 +10,7 @@ change.passwd   - Generic tool for changing password on hosts, supports multiple
 get.passwd      - Generic tool for getting /etc/passwd from host, supports multiple services.
 get.shell       - Generic tool for getting a shell on host, supports multiple services.
 sweeper         - A script to sweep complete subnets for Bank.txt. Fast, but has some issues.
+                  (Sweeper can be seen in action here: https://www.youtube.com/watch?v=ddDQ3fTPIGg )
 ```
 
 (NOTE: Save files in the game as .src, not .lua. I just used .lua to get color markup on GitHub)
