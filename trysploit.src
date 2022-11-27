@@ -1,0 +1,11 @@
+// Trysploit: Test an exploit directly to see what it does
+// Usage: trysploit <full path to lib file> <offset> <function name>
+
+metaxploit = include_lib("/lib/metaxploit.so")
+if not metaxploit then
+    metaxploit = include_lib(current_path + "/metaxploit.so")
+end if
+if not metaxploit then exit("Error: Can't find metaxploit library in the /lib path or the current folder")
+metaLib = metaxploit.load(params[0])
+if not metaLib then exit("Can't find " + params[0])
+result = metaLib.overflow(params[1], params[2])
