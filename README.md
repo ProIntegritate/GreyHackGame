@@ -12,6 +12,7 @@ get.shell         - Generic tool for getting a shell on host, supports multiple 
 sweeper           - A script to sweep complete subnets for Bank.txt. Fast, but has some issues.
 local.get.shell   - A local script to jump from guest to user.
 local.get.passwd  - A script to get /etc/passwd if local.get.shell doesn't work.
+uniq              - A port of the Unix command uniq to GreyHack
 ```
 (NOTE: Save files in the game as .src, not .lua. I just used .lua to get color markup on GitHub)
 
