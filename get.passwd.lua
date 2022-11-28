@@ -17,11 +17,10 @@ result = metaLib.overflow("0x656FAD1E", "formlockdyn_t") // libFTP 1.0.0
 if not result then result = metaLib.overflow("0x656FAD1E", "rhsa") // libFTP 1.0.0
 if not result then result = metaLib.overflow("0x14316037", "offsetactablete") // libFTP 1.0.1
 if not result then result = metaLib.overflow("0x3AFB18A2", "colon") // libSQL 1.0.0
-if not result then result = metaLib.overflow("0x656FAD1E", "formlockdyn_t") // libFTP 1.0.0
-if not result then result = metaLib.overflow("0x656FAD1E", "rhsa") // libFTP 1.0.0
-if not result then result = metaLib.overflow("0x14316037", "offsetactablete") // libFTP 1.0.1
-if not result then result = metaLib.overflow("0x7BEBCBE9", "source") // libHTTP 1.0.3
 if not result then result = metaLib.overflow("0x5FE1917F", "rinser") // libSSH 1.0.0
+if not result then result = metaLib.overflow("0x7BEBCBE9", "source") // libHTTP 1.0.3
+if not result then result = metaLib.overflow("0x56EB4E37", "gthsstartposi") // libSSH 1.0.3
+if not result then result = metaLib.overflow("0x31B2E17F", "eselh") // libSSH 1.0.4
 
 if not result then exit("Program ended")
 cryptools = include_lib("/lib/crypto.so")
