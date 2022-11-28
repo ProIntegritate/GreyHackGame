@@ -2,6 +2,7 @@
 // example: sweeper 22 1.1.1. 0 255
 // the example will sweep hosts from 1.1.1.0 to 1.1.1.255.
 // This version has some issues and limitations but works. Find them out for yourself.
+// Written in 2022, Ichinin
 
 // Imports Metaxploit
 metaxploit = include_lib("/lib/metaxploit.so")
