@@ -1,5 +1,6 @@
 // Portscanner, quite basic, Written just for fun.
 // syntax: scan <ip> <start port> <end port>
+// Written in 2022, Ichinin
 
 metaxploit = include_lib("/lib/metaxploit.so")
 if not metaxploit then
