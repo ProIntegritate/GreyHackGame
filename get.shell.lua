@@ -18,8 +18,6 @@ if not result then result = metaLib.overflow("0x121C868A", "codecodeintexttex") 
 if not result then result = metaLib.overflow("0x74E6A816", "toredp") // libHTTP 1.0.3
 if not result then result = metaLib.overflow("0x314959AC", "aorb") // libHTTP 1.0.0 (guest)
 if not result then result = metaLib.overflow("0x481D8767", "mask") // libSMTP 1.0.0
-if not result then result = metaLib.overflow("0x14316037", "orsdistend_color_") // libFTP 1.0.0
-if not result then result = metaLib.overflow("0x14316037", "orsdistend_color_") // libFTP 1.0.0
 if not result then result = metaLib.overflow("0x14316037", "orsdistend_color_") // libFTP 1.0.0 (Guest)
 
 if not result then exit("Program ended")
