@@ -1,5 +1,6 @@
 // Trysploit: Test an exploit directly to see what it does
 // Usage: trysploit <full path to lib file> <offset> <function name>
+// Written in 2022, Ichinin
 
 metaxploit = include_lib("/lib/metaxploit.so")
 if not metaxploit then
