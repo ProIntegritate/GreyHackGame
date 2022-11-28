@@ -11,7 +11,7 @@ if not net_session then exit("Error: can't connect to net session")
 metaLib = net_session.dump_lib
 
 // 
-// Exploit chain: First libSSH, then others. Guest accounts last.
+// Exploit chain: Guest accounts last resort for each service type.
 // 
 result = metaLib.overflow("0x5D51D0FD", "magetelitext") // libHTTP 1.0.2
 if not result then result = metaLib.overflow("0x121C868A", "codecodeintexttex") // libHTTP 1.0.1
