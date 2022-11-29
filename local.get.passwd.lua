@@ -9,14 +9,9 @@ if not metaLib then exit("Can't find " + "/lib/aptclient.so")
 // 
 // Exploit chain
 // 
-result = metaLib.overflow("0x1A5B6F85", "ontextsresu")
-if not result then result = metaLib.overflow("0xF20B831", "curso")
-if not result then result = metaLib.overflow("0x5A9D2353", "ubledc")
-if not result then result = metaLib.overflow("0x5A9D2353", "itionpointlinesizey")
-if not result then result = metaLib.overflow("0x1A5B6F85", "ontextsresu")
-if not result then result = metaLib.overflow("0x6DD0D081", "engtho")
-if not result then result = metaLib.overflow("0x15311FB8", "lor_shortbackgroun")
-if not result then result = metaLib.overflow("0x1302850E", "portlinenumsirectsetting")
+result = metaLib.overflow("0xoffset", "function")
+if not result then result = metaLib.overflow("0xoffset", "function")
+
 
 if not result then exit("Program ended")
 if typeof(result) != "file" then exit("Error: expected file, obtained: " + result)
