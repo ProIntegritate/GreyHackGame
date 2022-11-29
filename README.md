@@ -9,12 +9,12 @@ sshbrute          - A SSH Bruteforcer
 sweeper           - A script to sweep complete subnets for Bank.txt. Fast, but has some issues.
 portscanner       - A basic portscanner. Not needed since NMAP exists in the game, written for fun.
 
-** Attack tools **
-change.passwd     - Generic tool for changing password on hosts, supports multiple services. (Add your own exploits)
-get.passwd        - Generic tool for getting /etc/passwd from host, supports multiple services. (Add your own exploits)
-get.shell         - Generic tool for getting a shell on host, supports multiple services. (Add your own exploits)
-local.get.shell   - A local script to jump from guest to user. (Add your own exploits)
-local.get.passwd  - A script to get /etc/passwd if local.get.shell doesn't work. (Add your own exploits)
+** Attack tools ** (Add your own exploits)
+change.passwd     - Generic tool for changing password on hosts, supports multiple services. 
+get.passwd        - Generic tool for getting /etc/passwd from host, supports multiple services.
+get.shell         - Generic tool for getting a shell on host, supports multiple services.
+local.get.shell   - A local script to jump from guest to user.
+local.get.passwd  - A script to get /etc/passwd if local.get.shell doesn't work.
 
 ** Ported Unix commands **
 uniq              - A port of the Unix command uniq to GreyHack
