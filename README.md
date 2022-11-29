@@ -19,9 +19,9 @@ local.get.shell   - A local script to jump from guest to user.
 local.get.passwd  - A script to get /etc/passwd if local.get.shell doesn't work.
 
 ** Ported Unix commands **
-uniq              - A port of the Unix command uniq to GreyHack
-which             - A port of the Unix command which to GreyHack
-grep              - A port of the Unix command grep to GreyHack
+uniq              - Print unique strings from a text file.
+which             - Find a file anywhere on the system
+grep              - Find strings in text file.
 ```
 (NOTE: Save files in the game as .src, not .lua. I just used .lua to get color markup on GitHub)
 
