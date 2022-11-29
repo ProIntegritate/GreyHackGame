@@ -9,6 +9,7 @@ sshbrute          - A SSH Bruteforcer
 sweeper           - A script to sweep complete subnets for Bank.txt. Fast, but has some issues.
 portscanner       - A basic portscanner. Not needed since NMAP exists in the game, written for fun.
 services          - A services enable/disabler (Only affects lib files that starts with "lib*").
+verscan           - Scans a subnet for a  port and service version number to find vulnerable hosts.
 
 ** Attack tools ** (Add your own exploits)
 change.passwd     - Generic tool for changing password on hosts, supports multiple services. 
