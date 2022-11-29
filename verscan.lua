@@ -1,6 +1,6 @@
 // Version scanner, scans a subnet for vulnerable hosts given a version string, supports any service.
 
-if params.len == 0 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [net, i.e. 1.1.1.] [version, i.e. 1.0.2]</b>")
+if params.len == 0 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [net, i.e. 1.1.1.] [port, i.e. 22] [version, i.e. 1.0.2]</b>")
 
 // Imports Metaxploit
 metaxploit = include_lib("/lib/metaxploit.so")
