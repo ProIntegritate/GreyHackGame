@@ -1,6 +1,7 @@
 // Trysploit: Test an exploit directly to see what it does
 // Usage: trysploit <full path to lib file> <offset> <function name>
-// Written in 2022, Ichinin
+
+if params.len == 0 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [libfile.so] [0xoffset] [functionname]</b>")
 
 metaxploit = include_lib("/lib/metaxploit.so")
 if not metaxploit then
