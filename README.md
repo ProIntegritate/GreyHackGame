@@ -6,9 +6,9 @@ trysploit         - Command line tool to try an exploit and get some sense of wh
                     it belongs to before implementing it in code.
 ver               - Command line tool to find out version of a file
 portscanner       - A basic portscanner. Not needed since NMAP exists in the game, written for fun.
-change.passwd     - Generic tool for changing password on hosts, supports multiple services.
-get.passwd        - Generic tool for getting /etc/passwd from host, supports multiple services.
-get.shell         - Generic tool for getting a shell on host, supports multiple services.
+change.passwd     - Generic tool for changing password on hosts, supports multiple services. (Add your own exploits)
+get.passwd        - Generic tool for getting /etc/passwd from host, supports multiple services. (Add your own exploits)
+get.shell         - Generic tool for getting a shell on host, supports multiple services. (Add your own exploits)
 sweeper           - A script to sweep complete subnets for Bank.txt. Fast, but has some issues.
 local.get.shell   - A local script to jump from guest to user.
 local.get.passwd  - A script to get /etc/passwd if local.get.shell doesn't work.
