@@ -20,7 +20,6 @@ f = function(target)
 	comp = get_shell.host_computer
 	fileobject = comp.File(result)
 	fileobject.chmod("o-wrx", true)	
-	fileobject.chmod("g+wrx", true)
 	
 	// Generally, remove all other (o-wrx) rights from objects
 	print ("<color=#00ff00>chmod o-wrx on object " + result + "</color>")
@@ -51,14 +50,14 @@ f = function(target)
 		fileobject.chmod("g-wx", true)
 	end if
 
-	//if result.indexOf("/home") >=0 then
-		//print ("<color=#00ffff>chmod g-wrx on object " + result + "</color>")
-		//fileobject.chmod("g-x", true)
-	//end if
+	if result.indexOf("/home") >=0 then
+		print ("<color=#00ffff>chmod g-wrx on object " + result + "</color>")
+		fileobject.chmod("g-x", true)
+	end if
 
 	if result.indexOf("/root") >=0 then
 		print ("<color=#00ffff>chmod g-wrx on object " + result + "</color>")
-		fileobject.chmod("g-x", true)
+		fileobject.chmod("g-wrx", true)
 	end if
 
 	if result.indexOf("/Public") >=0 then
@@ -73,7 +72,18 @@ f = function(target)
 
 	if result.indexOf("/usr") >=0 then
 		print ("<color=#00ffff>chmod g-wrx on object " + result + "</color>")
-		fileobject.chmod("g-x", true)
+		fileobject.chmod("g-w", true)
+		print ("<color=#ff00cc>changing ownership of " + result + "</color>")
+		fileobject.set_owner("root", true)
+		fileobject.set_group("root", true)
+	end if
+
+	if result.indexOf("/bin") >=0 then
+		print ("<color=#00ffff>chmod g-wrx on object " + result + "</color>")
+		fileobject.chmod("g-w", true)
+		print ("<color=#ff00cc>changing ownership of " + result + "</color>")
+		fileobject.set_owner("root", true)
+		fileobject.set_group("root", true)
 	end if
 
 	if result.indexOf("/guest") >=0 then
