@@ -12,12 +12,13 @@ verscan           - Scans a subnet for port and service version number to quickl
 services          - A services enable/disabler (Only affects lib files that starts with "lib*").
 harden            - Harden, locks down your system a bit better.
 
-** Attack tools ** (Add your own exploits)
+** Attack tools ** (Templates, add your own exploits)
 change.passwd     - Generic tool for changing password on hosts, supports multiple services. 
 get.passwd        - Generic tool for getting /etc/passwd from host, supports multiple services.
 get.shell         - Generic tool for getting a shell on host, supports multiple services.
 local.get.shell   - A local script to jump from guest to user.
 local.get.passwd  - A script to get /etc/passwd if local.get.shell doesn't work.
+router.acl        - Router ACL changer.
 
 ** Ported Unix commands **
 uniq              - Print unique strings from a text file.
