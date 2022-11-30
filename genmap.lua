@@ -1,4 +1,4 @@
-// Add your own explots for dumping and cracking /etc/passwd, the more the better.
+// Add your own exploits for dumping and cracking /etc/passwd, the more the better.
 
 // --------------------------------------------------------------------------------
 
