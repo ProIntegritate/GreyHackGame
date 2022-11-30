@@ -36,14 +36,8 @@ sploithost = function(ip, port) // add param for exploits file
 		// 
 		
 		// libSSH
-		result = metaLib.overflow("0x11C0D524", "oninvoken") // LibSSH 1.0.0
-		if not result then result = metaLib.overflow("0x11C0D524", "schecked") // LibSSH 1.0.0 - 1.0.1
-		if not result then result = metaLib.overflow("0x74EF58A1", "buttontenertedistundow_s") // LibSSH 1.0.0
-		if not result then result = metaLib.overflow("0x5D4DF7B6", "omponenumsizelinenumber") // LibSSH 1.0.0
-		if not result then result = metaLib.overflow("0x4704882F", "uttonimagecodesetvarvents") // LibSSH 1.0.1
-	
-		// libSMTP
-		result = metaLib.overflow("0x7CC7A35B", "loat") // libSMTP 1.0.0
+		result = metaLib.overflow("0xoffset", "function") // libSSH 1.0.0
+		if not result then result = metaLib.overflow("0xoffset", "function") // libSSH 1.0.0
 		
 		if not result then b = false
 
