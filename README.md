@@ -23,7 +23,7 @@ router.acl          - Router ACL changer.
 
 ** Ported Unix commands **
 uniq                - Print unique strings from a text file.
-which               - Find a file anywhere on the system
+which               - Find a file anywhere on the system.
 grep                - Find strings in text file.
 
 ** Misc stuff **
