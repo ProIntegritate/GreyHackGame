@@ -9,13 +9,13 @@ if params.len == 0 or params[0] == "-h" or params[0] == "--help" then
 	print("<color=#ff0000>/_______  /_______  /\___|_  /|______  / |__|  |____/ |__|  \___  )</color>")
 	print("<color=#ff0000>        \/        \/       \/        \/                         \/ </color>")
 	print ("<color=#0088ff><b>SSHBrute - written by Ichinin.</b></color>")
-	exit("<i>Usage: "+program_path.split("/")[-1]+" [passwordfile] [host] [username]</i>")
+	exit("<i>Usage: "+program_path.split("/")[-1]+" [passwordfile] [username] [host]</i>")
 end if
 
 // get params
 passfile = params[0]
-host = params[1]
-login = params[2]
+login = params[1]
+host = params[2]
 
 // Import metaxploit
 metaxploit = include_lib("/lib/metaxploit.so")
@@ -42,7 +42,7 @@ counter = 1
 // Main loop
 for pw in passwords
 	if pw != "" then
-		print ("<color=#00ccff>Testing password: " + pw + "  [" + counter + "/" + passwords.len + "]</color>")
+		print ("<color=#00ccff>[" + counter + "/" + passwords.len + "] " + host + ", Testing password: " + pw + "</color>")
 		
 		// test passwrd as is
 		ms = mypc.connect_service(host,22,login,pw)
@@ -53,7 +53,7 @@ for pw in passwords
 		// todo add for-next loop with trailing 0-9
 		
 		// we got results!
-		if ms then exit("<color=#00ff00>Password for user " + login + " is " + pw + "</color>")
+		if ms then exit("<color=#00ff00>Credentials found: ssh " + login + "@" + pw + " " + host + " 22</color>")
 		counter = counter + 1
 		end if
 end for
