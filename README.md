@@ -6,13 +6,13 @@ Various source for the game GreyHack ( https://store.steampowered.com/app/605230
 trysploit                - Try exploit and report what it does
 ver                      - Get version number from lib file
 sshbrute                 - A SSH Bruteforcer
-sweeper                  - A script to sweep complete subnets for Bank.txt. Fast, but has some issues.
+sweeper (Video below)    - A script to sweep complete subnets for Bank.txt. Fast, but has some issues.
 portscanner              - A basic portscanner. Not needed since NMAP exists in the game, written for fun.
 verscan                  - Scans a subnet for port and service version number to quickly find vulnerable hosts.
 services                 - A services enable/disabler (Only affects lib files that starts with "lib*").
 harden                   - Harden, locks down your system a bit better.
 genmap                   - Automatically exploit N random hosts, dump passwords, crack and generate a Maps.conf file.
-ransomware (unreleased)  - Simulates ransomware in GreyHack, encrypts data with a static key using a simple cipher.
+ransomware (Video below) - Simulates ransomware in GreyHack, encrypts data with a static key using a simple cipher.
 
 ** Attack tools ** (Templates, add your own exploits)
 change.passwd            - Generic tool for changing password on hosts, supports multiple services. 
