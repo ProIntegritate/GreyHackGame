@@ -11,7 +11,7 @@ portscanner              - A basic portscanner. Not needed since NMAP exists in 
 verscan                  - Scans a subnet for port and service version number to quickly find vulnerable hosts.
 services                 - A services enable/disabler (Only affects lib files that starts with "lib*").
 harden                   - Harden, locks down your system a bit better.
-genmap                   - Automatically exploit N random hosts, dump passwords, crack and generate a Maps.conf file.
+genmap (Video below)     - Automatically exploit N random hosts, dump passwords, crack and generate a Maps.conf file.
 ransomware (Video below) - Simulates ransomware in GreyHack, encrypts data with a static key using a simple cipher.
 
 ** Attack tools ** (Templates, add your own exploits)
@@ -38,3 +38,5 @@ Videos:
 The Sweeper tool can be seen in action here: https://www.youtube.com/watch?v=ddDQ3fTPIGg
 
 The ransomware POC code can be seen in action here: https://www.youtube.com/watch?v=zUsNh2jP9no
+
+The Genmap tool can be seen in action here: https://www.youtube.com/watch?v=OIBUpBiuyR0
