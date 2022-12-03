@@ -12,7 +12,7 @@ verscan                  - Scans a subnet for port and service version number to
 services                 - A services enable/disabler (Only affects lib files that starts with "lib*").
 harden                   - Harden, locks down your system a bit better.
 genmap                   - Automatically exploit N random hosts, dump passwords, crack and generate a Maps.conf file.
-ransomware (unreleased)  - Simulates ransomware in GreyHack. Video here: https://www.youtube.com/watch?v=zUsNh2jP9no
+ransomware (unreleased)  - Simulates ransomware in GreyHack, encrypts data with a static key using a simple cipher.
 
 ** Attack tools ** (Templates, add your own exploits)
 change.passwd            - Generic tool for changing password on hosts, supports multiple services. 
@@ -34,3 +34,4 @@ functions_fileaccess.lua - simplified wrapper functions for file access.
 (NOTE: Save files in the game as .src, not .lua. I just used .lua to get color markup on GitHub)
 
 The Sweeper tool can be seen in action here: https://www.youtube.com/watch?v=ddDQ3fTPIGg
+The ransomware POC code can be seen in action here: https://www.youtube.com/watch?v=zUsNh2jP9no
