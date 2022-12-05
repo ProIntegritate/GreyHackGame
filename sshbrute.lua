@@ -9,13 +9,14 @@ if params.len == 0 or params[0] == "-h" or params[0] == "--help" then
 	print("<color=#ff0000>/_______  /_______  /\___|_  /|______  / |__|  |____/ |__|  \___  )</color>")
 	print("<color=#ff0000>        \/        \/       \/        \/                         \/ </color>")
 	print ("<color=#0088ff><b>SSHBrute - written by Ichinin.</b></color>")
-	exit("<i>Usage: "+program_path.split("/")[-1]+" [passwordfile] [username] [host]</i>")
+	exit("<i>Usage: "+program_path.split("/")[-1]+" [passwordfile] [username] [port] [host]</i>")
 end if
 
 // get params
 passfile = params[0]
 login = params[1]
-host = params[2]
+iport = params[2].to_int
+host = params[3]
 
 // Import metaxploit
 metaxploit = include_lib("/lib/metaxploit.so")
@@ -25,7 +26,7 @@ end if
 if not metaxploit then exit("Error: Can't find metaxploit library in the /lib path or the current folder")
 
 // Do we have a port at all on host
-net_session = metaxploit.net_use(host, 22)
+net_session = metaxploit.net_use(host, iport)
 if net_session then
 	else
 		exit ("Port 22 seems down on host " + host + " - exiting!")
