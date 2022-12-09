@@ -14,24 +14,7 @@ newPass = user_input("Enter new password: ")
 //
 // Exploit chain. No particular order needed.
 //
-result = metaLib.overflow("0x7BEBCBE9", "dentp", newPass) // libHTTP 1.0.0
-if not result then result = metaLib.overflow("0x1677DF43", "note", newPass) // libHTTP 1.0.1
-if not result then result = metaLib.overflow("0x5D51D0FD", "diomixergroundopos", newPass) // libHTTP 1.0.2
-if not result then result = metaLib.overflow("0x1677DF43", "note", newPass) // libHTTP 1.0.2 -> 1.0.3
-
-if not result then result = metaLib.overflow("0x452684EF", "oroutlinent_codes", newPass) // libSSH 1.0.0
-if not result then result = metaLib.overflow("0x61D11589", "guide", newPass) // libSSH 1.0.3
-if not result then result = metaLib.overflow("0x5FE1917F", "olorscrollx", newPass) // libSSH 1.0.3 - 1.0.4
-if not result then result = metaLib.overflow("0x5FE1917F", "orrunt++", newPass) // libSSH 1.0.3 - 1.0.4
-if not result then result = metaLib.overflow("0x452684EF", "text", newPass) // libSSH 1.0.3
-if not result then result = metaLib.overflow("0x31B2E17F", "etfocusonspritextsin", newPass) // libSSH 1.0.4
-
-if not result then result = metaLib.overflow("0x3AFB18A2", "ertypelendlistantsremoverlaytransf", newPass) // libSQL 1.0.0
-if not result then result = metaLib.overflow("0x67EAA167", "transformsizedeltaddregro", newPass) // libSQL 1.0.0
-
-if not result then result = metaLib.overflow("0x3842879F", "sthangenqueuetoncolor", newPass) // libFTP 1.0.0
-if not result then result = metaLib.overflow("0x3B2AD9BA", "esetd", newPass) // libFTP 1.0.0
-
-if not result then result = metaLib.overflow("0x22154A26", "kremoverlaysourcevolumeractivetr", newPass) // libSMTP 1.0.0
+result = metaLib.overflow("0xoffset", "function", newPass) // libxxx 1.0.0
+if not result then result = metaLib.overflow("0xoffset", "function", newPass) // libxxx 1.0.0
 
 if not result then exit("Program ended")
