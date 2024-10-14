@@ -29,7 +29,7 @@ if not metaxploit then exit("Error: Can't find metaxploit library in the /lib pa
 net_session = metaxploit.net_use(host, iport)
 if net_session then
 	else
-		exit ("Port 22 seems down on host " + host + " - exiting!")
+		exit ("Port seems down on host " + host + " - exiting!")
 end if
 
 // get passfile
@@ -43,20 +43,55 @@ counter = 1
 // Main loop
 for pw in passwords
 	if pw != "" then
+		//clear_screen
 		print ("<color=#00ccff>[" + counter + "/" + passwords.len + "] " + host + ", Testing password: " + pw + "</color>")
-		
+	
 		// test passwrd as is
-		ms = mypc.connect_service(host,22,login,pw)
-		if not ms then  // do Ucase on first character
-			pw = slice(pw, 0, 1).upper + slice(pw, 1, pw.len)
-			ms = mypc.connect_service(host,22,login,pw)
-		end if
-		// todo add for-next loop with trailing 0-9
+		ms = mypc.connect_service(host,iport,login,pw)
+		//print ("PW = " + pw)
 		
-		// we got results!
-		if ms then exit("<color=#00ff00>Credentials found: ssh " + login + "@" + pw + " " + host + " 22</color>")
-		counter = counter + 1
+		tmp = pw
+		// add trailing "1"
+		if not ms then
+			pw = pw + "1"
+			ms = mypc.connect_service(host,iport,login,pw)
+			//print ("PW = " + pw)
 		end if
+
+		// First character Capitalised
+		if not ms then
+			pw = tmp
+			pw = upper(pw[:1]) + pw[1:]
+			ms = mypc.connect_service(host,iport,login,pw)
+			//print ("PW = " + pw)
+		end if
+
+		// add trailing "1"
+		if not ms then
+			pw = pw + "1"
+			ms = mypc.connect_service(host,iport,login,pw)
+			//print ("PW = " + pw)
+		end if
+
+		// Remove first character
+		if not ms then
+			pw = tmp
+			pw = pw[1:]
+			ms = mypc.connect_service(host,iport,login,pw)
+			//print ("PW = " + pw)
+		end if
+
+		// add trailing "1"
+		if not ms then
+			pw = pw + "1"
+			ms = mypc.connect_service(host,iport,login,pw)
+			//print ("PW = " + pw)
+		end if		
+	
+		// we got results!
+		if ms then exit("<color=#00ff00>Credentials found: ssh " + login + "@" + pw + " " + host + " " + iport + "</color>")
+		counter = counter + 1
+	end if
 end for
 
 print ("Sorry, password not found")
