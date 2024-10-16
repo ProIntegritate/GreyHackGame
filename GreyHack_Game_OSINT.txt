@@ -1,0 +1,48 @@
+________________________________________________________________________________
+
+* Find out what services are running on the host (require nmap tool)
+
+$ nmap 1.1.1.15
+
+Starting nmap v1.1 at 29/Aug/2013 - 18:59
+Interesting ports on 1.1.1.15
+
+PORT  STATE   SERVICE    VERSION  LAN           
+25    open    smtp       1.0.4    172.16.16.11  
+3306  closed  employees  1.0.2    172.16.16.11  
+80    open    http       1.1.0    172.16.16.11
+________________________________________________________________________________
+
+* Find out contact information of who is operating the host, including DNS name
+
+$ whois 1.1.1.15
+Domain name: www.fordstef.com
+Administrative contact: Dar Rusian
+Email address: Rusian@fordstef.com
+Phone: 358555353
+________________________________________________________________________________
+
+* Find out the IP Address if you got the DNS name
+
+$ nslookup www.fordstef.com
+Address: 1.1.1.15
+________________________________________________________________________________
+
+* Find out who is operating the host by visiting the website (requires port 80)
+
+$ Browser.exe www.fordstef.com
+________________________________________________________________________________
+
+* Extract users from the SMTP users list (requires the smtp-user-list tool)
+
+$ smtp-user-list 1.1.1.15
+Connecting...
+Starting smtp-mail-list...
+
+###### Scan started ######
+root email not found
+Uratay email not found
+###### Scan completed ######
+2 results.
+________________________________________________________________________________
+
