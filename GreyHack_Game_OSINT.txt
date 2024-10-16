@@ -59,3 +59,21 @@ Local IP: 192.168.1.2
 Gateway: 192.168.1.1
 ________________________________________________________________________________
 
+* Scan a router of firewall device and find out it's version and rules
+
+$ scanrouter 1.1.1.15
+Connecting to router at address: 1.1.1.15
+Scanning kernel library...
+kernel_router.so : v1.1.3
+
+Scanning firewall rules...
+ACTION  PORT  SOURCE_IP    DESTINATION_IP  
+DENY    Any   Any          Any             
+ALLOW   Any   172.16.10.3  Any
+________________________________________________________________________________
+
+* Scan the local network to find subnets, devices etc and see how they are connected
+
+$ ScanLan.exe   (tool downloaded from a store)
+________________________________________________________________________________
+
