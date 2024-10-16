@@ -46,3 +46,16 @@ Uratay email not found
 2 results.
 ________________________________________________________________________________
 
+* Find out information about the host you are on. Wifi network too if connected.
+
+$ ifconfig
+
+Connected to Wi-Fi:
+Essid: NAME_XYZZY
+Bssid: 17:1C:17:15:15:17
+----------------
+Public IP: 111.222.333.444
+Local IP: 192.168.1.2
+Gateway: 192.168.1.1
+________________________________________________________________________________
+
