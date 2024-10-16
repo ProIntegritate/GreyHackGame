@@ -30,7 +30,7 @@ ________________________________________________________________________________
 
 * Find out who is operating the host by visiting the website (requires port 80)
 
-$ Browser.exe www.fordstef.com
+$ Browser.exe www.hostname.com
 ________________________________________________________________________________
 
 * Extract users from the SMTP users list (requires the smtp-user-list tool)
@@ -41,7 +41,7 @@ Starting smtp-mail-list...
 
 ###### Scan started ######
 root email not found
-Uratay email not found
+Username email not found
 ###### Scan completed ######
 2 results.
 ________________________________________________________________________________
