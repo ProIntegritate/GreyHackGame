@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
 * Find out the IP Address if you got the DNS name
 
-$ nslookup www.fordstef.com
+$ nslookup www.hostname.com
 Address: 1.1.1.15
 ________________________________________________________________________________
 
