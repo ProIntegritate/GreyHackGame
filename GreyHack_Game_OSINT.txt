@@ -16,10 +16,10 @@ ________________________________________________________________________________
 * Find out contact information of who is operating the host, including DNS name
 
 $ whois 1.1.1.15
-Domain name: www.fordstef.com
-Administrative contact: Dar Rusian
-Email address: Rusian@fordstef.com
-Phone: 358555353
+Domain name: www.hostname.com
+Administrative contact: Firstname Lastname
+Email address: email@hostname.com
+Phone: 987654321
 ________________________________________________________________________________
 
 * Find out the IP Address if you got the DNS name
