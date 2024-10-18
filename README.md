@@ -3,7 +3,8 @@ Various source for the game GreyHack ( https://store.steampowered.com/app/605230
 
 ```
 ** Tools **
-cleartrash.src           - Clears out files from .Trash folders.
+cleartrash               - Clears out files from .Trash folders.
+processmonitor           - List active processes in realtime.
 GreyHack_Game_OSINT.txt  - Tools and techniquest to get information about a host
 trysploit                - Try exploit and report what it does
 ver                      - Get version number from lib file
