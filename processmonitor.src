@@ -1,0 +1,30 @@
+// Process monitor, Written by Ichinin
+if params.len > 0 then
+	if params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" (thats it)</b>")
+end if
+
+while (true)
+
+	clear_screen
+	proclist =get_shell.host_computer.show_procs
+	procs = proclist.split("\n")
+
+	bFirstline = true
+	for p in procs
+		pdata = p.split(" ")
+		if p.indexOf("root") >= 0 then
+			col = "<color=#ff3f3f>"
+		else
+			col = "<color=#3f3f7f>"
+		end if
+		if bFirstline == true then
+			bFirstline = false
+			print ("<color=#ffffff>" + pdata[0] + char(9) + pdata[1] + char(9) + char(9) + char(9) + pdata[4] + "</color>")
+		else
+			print (col + pdata[0] + char(9) + "PID:" + pdata[1] + char(9) + "TN:" + pdata[4] + "</color>")
+		end if
+		
+	end for
+	wait (1)
+	
+end while
