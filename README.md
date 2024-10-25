@@ -3,6 +3,7 @@ Various source for the game GreyHack ( https://store.steampowered.com/app/605230
 
 ```
 ** Data **
+exploits_0.7_vanilla.zip - Exploits for version 0.8 (vanilla, not nightly build, ignore the 0.7 in the name)
 shodan_0.8.Vanilla.zip   - Scanned services from 1.0.0.0 to 1.1.75.255. Text (csv) files.
                            This does not reflect data from the Nightly build and will differ.
 
