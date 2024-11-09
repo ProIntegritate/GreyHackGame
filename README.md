@@ -8,6 +8,7 @@ shodan_0.8.Vanilla.zip   - Scanned services from 1.0.0.0 to 1.1.75.255. Text (cs
                            This does not reflect data from the Nightly build and will differ.
 
 ** Tools **
+wificrack                - Cracks WiFi passwords early in the game. Can be cancelled and resumed from earlier results.
 cleartrash               - Clears out files from .Trash folders.
 processmonitor           - List active processes in realtime.
 GreyHack_Game_OSINT.txt  - Tools and techniquest to get information about a host
