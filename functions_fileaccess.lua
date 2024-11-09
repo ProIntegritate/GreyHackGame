@@ -1,7 +1,8 @@
 fileread = function (filename)
 
 	file = get_shell.host_computer.File(filename)
-	result = file.get_content
+	result = ""
+	if file then result = file.get_content
 	return result
 	
 end function
