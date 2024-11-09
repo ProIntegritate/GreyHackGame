@@ -1,5 +1,5 @@
 // Grep, ported to GreyHack by Ichinin
-if params.len == 0 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [filename] [searchterm1] [searchterm2] ... [searchterm N]</b>")
+if params.len < 3 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [/fullpath/infile] [/fullpath/outfile] [searchterm1] [searchterm2] ... [searchterm N]</b>")
 
 fileread = function (filename)
 
@@ -9,35 +9,38 @@ fileread = function (filename)
 	
 end function
 
-sfilename = params[0]
-content = fileread(sfilename)
+filewrite = function (filefullpath, content)
+
+	filename = filefullpath.split("/")[-1]
+	filepath = filefullpath.replace(filename,"")
+
+	// Touch file so it exists
+	h = get_shell.host_computer
+	h.touch(filepath,filename)
+
+	// Write file
+	//foo = get_shell.host_computer.File(filepath + filename)
+	foo = get_shell.host_computer.File(filefullpath)
+	foo.set_content(content)
+
+end function
+
+ifile = params[0]
+ofile = params[1]
+content = fileread(ifile)
 slines = content.split("\n")
-ipos = 0
-bshow = true
+sresult = ""
 
 for line in slines
 
-	bshow = true // default for each line
-
 	for ssearch in params // loop through params
-		
-		if ssearch != sfilename then // ... except the filename
-
-			ipos = line.indexOf(ssearch)
-
-			if ipos >=0 then // do we get a position or null
-				// ok
-			else
-				// null here
-				bshow = false
+		if ssearch != ifile and ssearch != ofile then // ... except the filename
+			if line.indexOf(ssearch) >=0 then // do we get a position or null
+				sresult = sresult + line + char(10)
 			end if
-		
 		end if
-
 	end for
-
-	if bshow == true then // criteria(s) match
-		print (line) // show stuff
-	end if
 	
 end for
+
+filewrite(ofile, sresult)
