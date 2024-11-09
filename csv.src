@@ -1,0 +1,47 @@
+// csv, ported to GreyHack by Ichinin
+if params.len < 4 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [/fullpath/infile] [/fullpath/outfile] [separator character] [fields like 1,5,3,2,4]</b>")
+
+fileread = function (filename)
+
+	file = get_shell.host_computer.File(filename)
+	result = file.get_content
+	return result
+	
+end function
+
+filewrite = function (filefullpath, content)
+
+	filename = filefullpath.split("/")[-1]
+	filepath = filefullpath.replace(filename,"")
+
+	// Touch file so it exists
+	h = get_shell.host_computer
+	h.touch(filepath,filename)
+
+	// Write file
+	foo = get_shell.host_computer.File(filefullpath)
+	foo.set_content(content)
+
+end function
+
+sresult = ""
+ifile = params[0]
+ofile = params[1]
+separator = params[2]
+fields = params[3].split(",")
+
+stuff = fileread(ifile)
+lines = stuff.split("\n")
+
+for l in lines
+	if l.trim != "" then
+		data = l.split(separator)
+		for f in fields
+			sresult = sresult + data[f.to_int - 1] + separator
+		end for
+		sresult = sresult + char(10)
+	end if
+end for
+
+sresult = sresult.replace("," + char(10), char(10))
+filewrite(ofile,sresult)
