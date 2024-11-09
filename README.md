@@ -35,6 +35,7 @@ router.acl               - Router ACL changer.
 uniq                     - Print unique strings from a text file. (Rewritten)
 sort                     - Sorts lines in a text file. (Rewritten)
 grep                     - Find strings in text file. (Rewritten)
+csv                      - Selects columns in a CSV file and outputs a new CSV file. (Rewritten)
 which                    - Find a file anywhere on the system.
 date                     - Show current date and time
 lc                       - LineCount, counds lines in a text file
