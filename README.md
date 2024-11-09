@@ -36,6 +36,7 @@ uniq                     - Print unique strings from a text file.
 which                    - Find a file anywhere on the system.
 grep                     - Find strings in text file.
 date                     - Show current date and time
+lc                       - LineCount, counds lines in a text file
 
 ** Misc stuff **
 functions_hextodec       - functions to conver from hex to dec and dec to hex.
