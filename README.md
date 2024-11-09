@@ -32,9 +32,10 @@ local.get.passwd         - A script to get /etc/passwd if local.get.shell doesn'
 router.acl               - Router ACL changer.
 
 ** Ported Unix commands **
-uniq                     - Print unique strings from a text file.
+uniq                     - Print unique strings from a text file. (Rewritten)
+sort                     - Sorts lines in a text file. (Rewritten)
+grep                     - Find strings in text file. (Rewritten)
 which                    - Find a file anywhere on the system.
-grep                     - Find strings in text file.
 date                     - Show current date and time
 lc                       - LineCount, counds lines in a text file
 
