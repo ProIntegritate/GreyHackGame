@@ -56,7 +56,7 @@ for cpwr in range(iStart,iStop)
 		bssid = parsed[0]
 		pwr = parsed[1][:-1].to_int
 		essid = parsed[2]
-		potentialAcks = floor(275000 / (pwr + 5))  // Less insane runtine on this one.
+		potentialAcks = floor(275000 / pwr)  // Less insane runtine on this one.
 		if pwr == cpwr then
 			if sresult.indexOf(bssid) >= 0 then
 			else
@@ -64,14 +64,14 @@ for cpwr in range(iStart,iStop)
 				print ("<color=#cccc00>Your already cracked WiFi credentials are saved (as wifi_cracked.txt), so you can cancel this program at any time. Any already existing file will be continued from.</color>\n")
 				print ("<color=#ff7fff>Potential ACK's (search space): " + potentialAcks + "</color>")
 				crypto.aireplay(bssid, essid, potentialAcks)	// -> file.pcap
-				wifiPassword = crypto.aircrack("/root/file.cap")
+				wifiPassword = crypto.aircrack("file.cap")
 				print("<color=#00ff7f>Wifi password for " + essid + " is " + wifiPassword + "</color>")	
 				sresult = sresult + bssid + "," + pwr + "%," +  essid + "," + wifiPassword + char(10)
 				icount = icount + 1
 			end if			
 		end if
+		filewrite(sFilename,sresult)
 	end for
-	filewrite(sFilename,sresult)
 end for
 
 clear_screen
