@@ -63,8 +63,8 @@ for cpwr in range(iStart,iStop)
 				print ("<color=#7fff7f>Processing network: " + index + "</color>\n")
 				print ("<color=#cccc00>Your already cracked WiFi credentials are saved (as wifi_cracked.txt), so you can cancel this program at any time. Any already existing file will be continued from.</color>\n")
 				print ("<color=#ff7fff>Potential ACK's (search space): " + potentialAcks + "</color>")
-				crypto.aireplay(bssid, essid, potentialAcks)	// -> file.pcap
-				wifiPassword = crypto.aircrack("file.cap")
+				crypto.aireplay(bssid, essid, potentialAcks )	// -> file.pcap
+				wifiPassword = crypto.aircrack(current_path + "/file.cap")
 				print("<color=#00ff7f>Wifi password for " + essid + " is " + wifiPassword + "</color>")	
 				sresult = sresult + bssid + "," + pwr + "%," +  essid + "," + wifiPassword + char(10)
 				icount = icount + 1
